@@ -6,16 +6,14 @@ namespace SRPSolution
     {
         public static bool Validate(Person person)
         {
-            bool isFirstNameValid = string.IsNullOrWhiteSpace(person.FirstName);
-            bool isLastNameValid = string.IsNullOrWhiteSpace(person.LastName);
-
-            if (isFirstNameValid == false)
+            // Checks to be sure the first and last names are valid
+            if (string.IsNullOrWhiteSpace(person.FirstName))
             {
                 StandardMessages.DisplayValidationError("first name");
                 return false;
             }
 
-            if (isLastNameValid == false)
+            if (string.IsNullOrWhiteSpace(person.LastName))
             {
                 StandardMessages.DisplayValidationError("last name");
                 return false;
