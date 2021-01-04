@@ -14,7 +14,7 @@ namespace DIPSolution
             return new Chore(CreateLogger(), CreateMessageSender());
         }
 
-        public static ILogger CreateLogger() 
+        public static ILogger CreateLogger()
         {
             return new Logger();
         }
